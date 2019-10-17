@@ -224,7 +224,7 @@ class ContentTreeBase(Explicit):
     def renderForValue(self, value):
         try:
             return super(ContentTreeBase, self).renderForValue(value)
-        except LookupError, e:
+        except LookupError as e:
             if value != z3c.form.widget.SequenceWidget.noValueToken:
                 raise e
         item = {
